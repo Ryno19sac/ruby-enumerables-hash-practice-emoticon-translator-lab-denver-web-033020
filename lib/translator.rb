@@ -1,8 +1,59 @@
 # require modules here
 
-def load_library
-  # code goes here
+require 'yaml'
+require 'pry'
+#emoticons = angel:
+ # - "O:)"      
+#  - "☜(⌒▽⌒)☞"
+#angry:
+#  - ">:("
+ # - "ヽ(ｏ`皿′ｏ)ﾉ"
+#bored:
+#  - ":O"
+#  - "(ΘεΘ;)"
+#confused:
+#  - "%)"
+#  - "(゜.゜)"
+#embarrased:
+#  - ":$" 
+#  - "(#^.^#)"
+#fish:
+#  - "><>"
+#  - ">゜))))彡"
+#glasses:
+#  - "8D"
+#  - "(^0_0^)"
+#grinning:
+#  - "=D"
+#  - "(￣ー￣)"
+#happy:
+#  - ":)"
+#  - "(＾ｖ＾)"
+#kiss:
+#  - ":*"
+#  - "(*^3^)/~☆"
+#sad:
+#  - ":'("
+#  - "(Ｔ▽Ｔ)"
+#surprised:
+#  - ":o"
+#  - "o_O"
+#wink:
+#  - ";)"
+#  - "(^_-)" \\
+def load_library(emoticons)
+library = YAML.load_file(emoticons)
+
+result = {"get_meaning" => {}, "get_emoticon" => {}}
+#binding.pry
+  library.each do |meaning, emoticons|
+  result["get_meaning"][emoticons[1]] = meaning
+  result["get_emoticon"][emoticons[0]] = emoticons[1]
+  end 
+result
 end
+
+
 
 def get_japanese_emoticon
   # code goes here
