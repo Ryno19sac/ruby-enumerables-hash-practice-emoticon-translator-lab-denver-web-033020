@@ -61,7 +61,7 @@ def get_japanese_emoticon(file_path = './lib/emoticons.yml', english_emoticon)
     library["get_emoticon"][english_emoticon]
   else "Sorry that emoticon doesn't exists here"
   # code goes here
-
+  end
 end
 
 def get_english_meaning
