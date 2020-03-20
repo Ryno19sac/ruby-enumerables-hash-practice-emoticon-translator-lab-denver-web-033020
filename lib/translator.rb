@@ -64,6 +64,6 @@ def get_japanese_emoticon(file_path = './lib/emoticons.yml', english_emoticon)
   end
 end
 
-def get_english_meaning
+def get_english_meaning('./lib/emoticons.yml', )
   # code goes here
 end
